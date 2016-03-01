@@ -78,6 +78,14 @@ var UserSchema = new Schema({
 	updated: {
 		type: Date
 	},
+	trees: [{
+		type: Schema.Types.ObjectId,
+		ref: 'Tree'
+	}],
+	tree_limit: {
+		type: Number,
+		default: 1
+	},
 	created: {
 		type: Date,
 		default: Date.now
