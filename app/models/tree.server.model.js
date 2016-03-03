@@ -10,34 +10,18 @@ var mongoose = require('mongoose'),
  * Tree Schema
  */
 var TreeSchema = new Schema({
-	isRoot: {
-		type: Boolean,
-		default: false
+	name: {
+		type: String,
+		match: [/^[a-z\ !\?\.,\-]{1,30}$/i, 'Not valid tree name'],
+		required: 'Please fill in a tree name'
 	},
-	options: {
-		name: {
-			type: String,
-			match: [/^[a-z\ !\?\.,\-]{1,30}$/i, 'Not valid tree name']
-		}
-	},
-	question: {
-		type: Schema.Types.ObjectId,
-		ref: 'Question'
-	},
-	root: {
+	owner: {
 		type: Schema.Types.ObjectId,
 		ref: 'Tree'
 	},
-	trees: [{
-		type: Schema.Types.ObjectId,
-		ref: 'Tree'
-	}],
 	created: {
 		type: Date,
 		default: Date.now
-	},
-	updated: {
-		type: Date
 	}
 });
 

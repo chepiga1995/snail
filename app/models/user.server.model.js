@@ -52,6 +52,7 @@ var UserSchema = new Schema({
 		type: String,
 		unique: 'Username already exists',
 		required: 'Please fill in a username',
+		match: [/^[a-z!\?\.,\-]{1,30}$/i, 'Please fill a valid username'],
 		trim: true
 	},
 	password: {
@@ -78,10 +79,6 @@ var UserSchema = new Schema({
 	updated: {
 		type: Date
 	},
-	trees: [{
-		type: Schema.Types.ObjectId,
-		ref: 'Tree'
-	}],
 	tree_limit: {
 		type: Number,
 		default: 1
