@@ -1,1 +1,2 @@
-forever start /home/ubuntu/snail/server.js
+cd /home/ubuntu/snail &&
+forever start ./server.js
