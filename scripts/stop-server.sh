@@ -1,1 +1,1 @@
-forever stop ../server.js
+forever stopall

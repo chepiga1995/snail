@@ -1,1 +1,1 @@
-forever start ../server.js
+forever start ~/snail/server.js
