@@ -8,7 +8,3 @@ hooks:
     - location: scripts/run-server.sh
       timeout: 300
       runas: root
-  ApplicationStop:
-    - location: scripts/stop-server.sh
-      timeout: 300
-      runas: root
