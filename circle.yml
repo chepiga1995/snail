@@ -2,5 +2,12 @@ deployment:
   staging:
     branch: master
     codedeploy:
-     snail:
+      snail:
+        application_root: /
+        region: eu-west-1
+        revision_location:
+          revision_type: S3
+          s3_location:
+            bucket: cirlceci
+            key_pattern: snail-{BRANCH}-{SHORT_COMMIT}
         deployment_group: snail_group
