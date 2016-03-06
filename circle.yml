@@ -14,5 +14,5 @@ deployment:
 dependencies:
   pre:
     - printenv > .env
-  override:
+  post:
     - grunt build
