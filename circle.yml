@@ -13,5 +13,6 @@ deployment:
         deployment_group: snail_group
 dependencies:
   pre:
-    -  printenv > .env
+    - printenv > .env
+  override:
     - grunt build
