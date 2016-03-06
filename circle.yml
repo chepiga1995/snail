@@ -12,8 +12,6 @@ deployment:
             key_pattern: snail-{BRANCH}-{SHORT_COMMIT}
         deployment_group: snail_group
 dependencies:
-  post:
+  pre:
+    -  printenv > .env
     - grunt build
-machine:
-  post:
-    - printenv > .env
