@@ -16,4 +16,4 @@ dependencies:
     - grunt build
 machine:
   post:
-  	- printenv > .env
+    - printenv > .env
