@@ -7,7 +7,7 @@ var init = require('./config/init')(),
 	mongoose = require('mongoose'),
 	chalk = require('chalk');
 
-/**
+/** hj
  * Main application entry file.
  * Please note that the order of loading is important.
  */
